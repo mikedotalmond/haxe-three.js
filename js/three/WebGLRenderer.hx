@@ -71,8 +71,11 @@ extern class WebGLRenderer implements Renderer {
 
     public function renderBufferImmediate(object:Object3D, program:Dynamic, material:Material) : Void;
     public function renderBufferDirect(camera:Camera, lights:Array<Light>, fog:Fog, material:Material, geometry:Geometry, object:Object3D) : Void;
-    public function render(scene:Scene, camera:Camera, ?renderTarget:WebGLRenderTarget, ?forceClear:Bool) : Void;
-    public function renderImmediateObject(camera:Camera, lights:Array<Light>, fog:Fog, material:Material, geometry:Geometry, object:Object3D) : Void;
+
+	@:overload(function (scene:Scene, camera:Camera, ?renderTarget:WebGLRenderTarget, ?forceClear:Bool):Void{})
+    public function render(scene:Scene, camera:Camera) : Void;
+
+	public function renderImmediateObject(camera:Camera, lights:Array<Light>, fog:Fog, material:Material, geometry:Geometry, object:Object3D) : Void;
 
     public function initWebGLObjects(scene:Scene) : Void;
     public function initMaterial(material:Material, lights:Array<Light>, fog:Fog, object:Object3D) : Void;
