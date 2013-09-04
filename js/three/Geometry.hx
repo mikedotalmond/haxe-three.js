@@ -17,7 +17,10 @@ extern class Geometry {
     public var boundingBox : { x:Array<Float>, y:Array<Float>, z:Array<Float> };
     public var boundingSphere : { radius:Float };
     public var hasTangents : Bool; // false
-    // public var dynamic : Bool; // true  this.verticesNeedUpdate = false;
+
+    public var verticesNeedUpdate:Bool;
+    public var morphTargetsNeedUpdate:Bool;
+	
     public var elementsNeedUpdate : Bool; // false
     public var uvsNeedUpdate : Bool; // false
     public var normalsNeedUpdate : Bool; // false
