@@ -35,7 +35,7 @@ class Detector {
 		return untyped __js__("!!window.Worker");
 	}
 	
-	static inline function get_canvas():Bool {
+	static function get_canvas():Bool {
 		return untyped __js__("!!window.CanvasRenderingContext2D");
 	}
 	
