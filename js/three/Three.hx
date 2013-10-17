@@ -6,7 +6,7 @@ class Three {
         return untyped js.Browser.window.requestAnimationFrame(f);
     }
 
-    public static inline function cancelAnimationFrame(f:Void->Void) {
+    public static inline function cancelAnimationFrame(id:Int) {
         untyped js.Browser.window.cancelAnimationFrame(id);
     }
 
